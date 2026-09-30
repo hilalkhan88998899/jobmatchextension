@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Profile · JobMatch AI</title>
+  <link rel="stylesheet" href="../shared.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../dashboard/dashboard.html"><img src="../assets/icon32.png" alt="" width="24" height="24">JobMatch AI</a>
+    <nav aria-label="Main">
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+      <a href="profile.html" aria-current="page">Profile</a>
+      <a href="../settings/settings.html">Settings</a>
+    </nav>
+  </header>
+  <main class="page">
+    <div class="stack">
+      <div>
+        <h1>My profile</h1>
+        <p class="muted">Only add what is true. JobMatch AI compares job postings against exactly what you enter here and never adds anything on your behalf. Everything is stored in this browser.</p>
+      </div>
+      <div id="welcome" class="banner hidden">Welcome! Fill in the essentials (skills, education, experience), then open any job listing and click the JobMatch AI icon.</div>
+      <form id="form" class="stack" novalidate></form>
+    </div>
+  </main>
+  <div class="savebar">
+    <div class="savebar-inner">
+      <div class="grow">
+        <span id="completion-text" class="small">Profile completion: 0%</span>
+        <div class="progress"><span id="completion-bar" style="width:0%"></span></div>
+      </div>
+      <button id="btn-delete" type="button" class="btn btn-danger">Delete profile</button>
+      <button id="btn-save" type="submit" form="form" class="btn btn-primary">Save profile</button>
+    </div>
+  </div>
+  <script type="module" src="profile.js"></script>
+</body>
+</html>

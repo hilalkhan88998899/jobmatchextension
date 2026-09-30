@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JobMatch AI</title>
+  <link rel="stylesheet" href="../shared.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="head">
+    <img src="../assets/icon32.png" alt="" width="28" height="28">
+    <div class="grow">
+      <h1>JobMatch AI</h1>
+      <p class="muted small">Understand the job. Match your skills. Organize your applications.</p>
+    </div>
+    <button id="btn-settings" class="btn btn-ghost btn-sm" aria-label="Open settings">Settings</button>
+  </header>
+
+  <main class="stack">
+    <section class="card stack" aria-labelledby="h-page">
+      <h2 id="h-page">Current page</h2>
+      <p id="page-title" class="muted clamp">Loading…</p>
+      <div class="row">
+        <button id="btn-analyze" class="btn btn-primary grow">Analyze This Job</button>
+        <button id="btn-select" class="btn grow">Select Job Text</button>
+      </div>
+      <p class="hint">Only the job text is read, and only after you click. Nothing is submitted for you.</p>
+      <div id="msg" class="banner hidden" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="card stack" aria-labelledby="h-profile">
+      <h2 id="h-profile">My profile</h2>
+      <div>
+        <p id="completion-text" class="small">Profile completion: 0%</p>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="completion-bar"><span style="width:0%"></span></div>
+      </div>
+      <button id="btn-profile" class="btn">Edit Profile</button>
+    </section>
+
+    <section class="card stack" aria-labelledby="h-recent">
+      <h2 id="h-recent">Recent applications</h2>
+      <ul id="recent" class="recent"></ul>
+      <button id="btn-dashboard" class="btn">Open Dashboard</button>
+    </section>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.section h2 { margin-bottom: 12px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+.row-card { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-items: start; }
+.row-card > .btn { justify-self: start; }
+.repeater { display: grid; gap: 10px; margin-bottom: 10px; }
+.savebar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--surface); border-top: 1px solid var(--border); padding: 10px 16px; }
+.savebar-inner { max-width: 960px; margin: 0 auto; display: flex; gap: 12px; align-items: center; }

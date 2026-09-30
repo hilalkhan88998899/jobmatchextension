@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "JobMatch AI",
+  "version": "1.0.0",
+  "description": "Understand the job. Match your skills. Organize your applications.",
+  "minimum_chrome_version": "110",
+  "action": {
+    "default_title": "JobMatch AI",
+    "default_popup": "popup/popup.html",
+    "default_icon": { "16": "assets/icon16.png", "32": "assets/icon32.png", "48": "assets/icon48.png", "128": "assets/icon128.png" }
+  },
+  "icons": { "16": "assets/icon16.png", "32": "assets/icon32.png", "48": "assets/icon48.png", "128": "assets/icon128.png" },
+  "background": { "service_worker": "background/service-worker.js", "type": "module" },
+  "options_ui": { "page": "settings/settings.html", "open_in_tab": true },
+  "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
+  "host_permissions": ["http://localhost/*", "http://127.0.0.1/*"],
+  "optional_host_permissions": ["https://*/*"]
+}

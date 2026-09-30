@@ -1,0 +1,2 @@
+/* Briefly outlines the part of the page JobMatch AI read, so the user can see exactly what was extracted. */
+.jobmatch-ai-highlight { outline: 3px solid #0b6b6b !important; outline-offset: 4px !important; transition: outline-color .3s; }

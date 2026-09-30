@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard · JobMatch AI</title>
+  <link rel="stylesheet" href="../shared.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#overview"><img src="../assets/icon32.png" alt="" width="24" height="24">JobMatch AI</a>
+    <nav aria-label="Main">
+      <a href="#overview" data-view="overview">Overview</a>
+      <a href="#applications" data-view="applications">Applications</a>
+      <a href="#search" data-view="search">Job search</a>
+      <a href="../profile/profile.html">Profile</a>
+      <a href="../settings/settings.html">Settings</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section id="view-overview" class="stack" aria-labelledby="h-overview"></section>
+    <section id="view-applications" class="stack hidden" aria-labelledby="h-apps"></section>
+    <section id="view-search" class="stack hidden" aria-labelledby="h-search"></section>
+  </main>
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

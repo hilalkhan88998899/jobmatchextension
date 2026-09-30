@@ -1,0 +1,7 @@
+body { width: 380px; padding: 12px; }
+.head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.head h1 { font-size: 17px; }
+.clamp { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-break: break-word; }
+.recent { list-style: none; padding: 0; display: grid; gap: 8px; }
+.recent li { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.recent .t { font-weight: 600; } .recent .c { color: var(--muted); font-size: 12px; }

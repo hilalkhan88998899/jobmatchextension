@@ -1,0 +1,24 @@
+.page { max-width: 1080px; }
+.stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 900px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.stat .n { font-size: 30px; font-weight: 700; line-height: 1.1; }
+.two { display: grid; grid-template-columns: 2fr 3fr; gap: 12px; }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+.pipe { display: grid; gap: 8px; }
+.pipe-row { display: grid; grid-template-columns: 90px 1fr 28px; gap: 8px; align-items: center; }
+.bar-saved { fill: var(--muted); } .bar-applied { fill: var(--primary); }
+.axis { stroke: var(--border); } .tick { fill: var(--muted); font-size: 11px; }
+.legend { display: flex; gap: 16px; font-size: 12px; color: var(--muted); }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
+svg.chart { width: 100%; height: auto; }
+.app { padding: 0; }
+.app > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.app > summary::-webkit-details-marker { display: none; }
+.app .body { padding: 0 16px 16px; display: grid; gap: 12px; border-top: 1px solid var(--border); padding-top: 12px; }
+.app .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 640px) { .app .fields { grid-template-columns: 1fr; } }
+.toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: end; }
+.toolbar .field { min-width: 160px; }
+.form-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .form-grid { grid-template-columns: 1fr; } }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }

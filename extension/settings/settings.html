@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Settings · JobMatch AI</title>
+  <link rel="stylesheet" href="../shared.css">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../dashboard/dashboard.html"><img src="../assets/icon32.png" alt="" width="24" height="24">JobMatch AI</a>
+    <nav aria-label="Main">
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+      <a href="../profile/profile.html">Profile</a>
+      <a href="settings.html" aria-current="page">Settings</a>
+    </nav>
+  </header>
+  <main class="page stack">
+    <h1>Settings</h1>
+
+    <section class="card stack" aria-labelledby="h-ai">
+      <h2 id="h-ai">AI settings</h2>
+      <p class="muted">JobMatch AI talks to your own backend server. The AI API key lives only in that server's <code>.env</code> file, never in this extension.</p>
+      <div class="field">
+        <label for="backend-url">Backend URL</label>
+        <input id="backend-url" type="url" placeholder="http://localhost:3000">
+        <small class="hint">Use http://localhost:3000 for local development. Remote servers must use https:// and Chrome will ask for permission.</small>
+      </div>
+      <div class="row">
+        <button id="btn-save-url" class="btn btn-primary">Save URL</button>
+        <button id="btn-test" class="btn">Test connection</button>
+        <span id="test-result" class="small" role="status"></span>
+      </div>
+    </section>
+
+    <section class="card stack" aria-labelledby="h-theme">
+      <h2 id="h-theme">Theme</h2>
+      <fieldset class="checks" id="theme-group">
+        <legend class="sr-only">Theme</legend>
+        <label><input type="radio" name="theme" value="system"> System</label>
+        <label><input type="radio" name="theme" value="light"> Light</label>
+        <label><input type="radio" name="theme" value="dark"> Dark</label>
+      </fieldset>
+    </section>
+
+    <section class="card stack" aria-labelledby="h-privacy">
+      <h2 id="h-privacy">Privacy</h2>
+      <ul class="privacy">
+        <li><strong>Only when you ask.</strong> The extension reads a page only after you click Analyze or Select Job Text, or right-click selected text. It never runs in the background on sites you browse.</li>
+        <li><strong>What is sent for analysis:</strong> the job text (or the part you selected) plus the profile fields needed to compare: skills, languages, frameworks, tools, education, experience, projects, preferences and resume text. Your name, links and salary expectation are not sent.</li>
+        <li><strong>For resume and cover letter drafts</strong> your name and profile links are also included so the draft can have a header.</li>
+        <li><strong>Where it goes:</strong> to your JobMatch AI backend, which forwards it to the AI provider configured on that server. Other page content, cookies and browsing history are never sent.</li>
+        <li><strong>Retention:</strong> the backend does not store or log requests. The AI provider applies its own data policy, so review it for the provider you use.</li>
+        <li><strong>Local storage:</strong> your profile, saved jobs and applications stay in this browser (chrome.storage.local). It is not encrypted, so anyone with access to your browser profile could read it. Delete it any time below.</li>
+        <li><strong>No selling, no analytics, no auto-apply.</strong> JobMatch AI never submits an application for you.</li>
+      </ul>
+    </section>
+
+    <section class="card stack" aria-labelledby="h-data">
+      <h2 id="h-data">Data management</h2>
+      <div class="row">
+        <button id="btn-export" class="btn btn-primary">Export My Data</button>
+      </div>
+      <div class="row">
+        <button id="btn-del-profile" class="btn btn-danger">Delete Profile</button>
+        <button id="btn-del-jobs" class="btn btn-danger">Delete Saved Jobs</button>
+        <button id="btn-del-apps" class="btn btn-danger">Delete Applications</button>
+        <button id="btn-del-all" class="btn btn-danger">Delete All Local Data</button>
+      </div>
+      <p class="hint">Saved jobs are the stored postings and their analyses. Applications are your tracker entries.</p>
+    </section>
+  </main>
+  <script type="module" src="settings.js"></script>
+</body>
+</html>
